@@ -98,9 +98,9 @@ if(empty($_SESSION['login'])){
             <label for="estado">Estado de conservação</label>
             <div>
                 <select class="form-control" name="estado" id="estado" required>
-                    <option value="0" <?php echo ($info['estado']=='0')?'selected="selected"':''; ?>>Ruim</option>
-                    <option value="1" <?php echo ($info['estado']=='1')?'selected="selected"':''; ?>>Bom</option>
-                    <option value="2" <?php echo ($info['estado']=='2')?'selected="selected"':''; ?>>Excelente</option>
+                    <option value="1" <?php echo ($info['estado']=='1')?'selected="selected"':''; ?>>Ruim</option>
+                    <option value="2" <?php echo ($info['estado']=='2')?'selected="selected"':''; ?>>Bom</option>
+                    <option value="3" <?php echo ($info['estado']=='3')?'s  elected="selected"':''; ?>>Excelente</option>
                 </select>
             </div>
         </div>

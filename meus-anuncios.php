@@ -53,7 +53,7 @@
                 <?php endif; ?>
             </td>
             <td style="padding-top: 30px"><?php echo $anuncios['titulo']; ?></td>
-            <td style="padding-top: 30px">R$ <?php echo number_format($anuncios['valor'], 2); ?></td>
+            <td style="padding-top: 30px">R$ <?php echo number_format($anuncios['valor'], 2,',','.'); ?></td>
             <td style="width: 200px; padding-top: 25px">
                 <a class="btn btn-outline-secondary" href="editar-anuncio.php?id=<?php echo $anuncios['id']; ?>">Editar</a>
                 <a class="btn btn-outline-danger" href="excluir-anuncio.php?id=<?php echo $anuncios['id']; ?>">Excluir</a>

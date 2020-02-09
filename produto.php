@@ -13,6 +13,14 @@
     }
 
     $info = $anuncio->getAnuncio($id);
+    if($info['estado']==1){
+        $info['estado'] = 'Ruim';
+    }elseif($info['estado']==2){
+        $info['estado'] = 'Bom';
+    }
+    elseif($info['estado']==3){
+        $info['estado'] = 'Excelente';
+    }
     $countInfo = count($info['fotos']);
 
 ?>
@@ -21,7 +29,7 @@
     <div class="row" style="margin-right: 1px">
         <div class="col-sm-5">
             <!-- Carousel -->
-            <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
                 <ol class="carousel-indicators">
                     <?php for($i=0;$i<$countInfo;$i++): ?>
                         <li data-target="#carousel" data-slide-to="<?php echo $i?>" class="<?php echo ($i==0)?'active':'' ;?>"></li>
@@ -54,10 +62,12 @@
         <div class="col-sm-7 textoProduto">
             <h1><?php echo $info['titulo']; ?></h1>
             <h4><?php echo utf8_encode($info['categoria']); ?></h4>
+            <h4>Descrição</h4>
             <p><?php echo $info['descricao']; ?></p>
-            <br/>
-            <h3>R$ <?php echo number_format($info['valor'], 2); ?></h3>
-            <h5>Telefone: <?php echo $info['telefone']; ?></h5>
+            <h4>Estado de conservação</h4>
+            <p><?php echo $info['estado']; ?></p>
+            <h3>R$ <?php echo number_format($info['valor'], 2,',','.'); ?></h3>
+            <p>Telefone: <?php echo $info['telefone']; ?></p>
         </div>
     </div>
 </div>

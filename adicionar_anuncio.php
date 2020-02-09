@@ -78,9 +78,9 @@ if(empty($_SESSION['login'])){
             <label for="estado">Estado de conservação</label>
             <div>
                 <select class="form-control" name="estado" id="estado" required>
-                    <option value="0">Ruim</option>
-                    <option value="1">Bom</option>
-                    <option value="2">Excelente</option>
+                    <option value="1">Ruim</option>
+                    <option value="2">Bom</option>
+                    <option value="3">Excelente</option>
                 </select>
             </div>
         </div>
